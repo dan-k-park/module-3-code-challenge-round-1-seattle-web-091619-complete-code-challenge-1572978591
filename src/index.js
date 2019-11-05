@@ -81,6 +81,8 @@ const initializeCommentsForm = (image, url) => {
     newCommentLI.textContent = newComment;
     commentList.append(newCommentLI);
 
+    
+
     fetch(url, {
       method: 'POST',
       headers: {
@@ -92,6 +94,8 @@ const initializeCommentsForm = (image, url) => {
         content: newComment
       })
     })
+
+    commentForm.reset();
   })
 
 }
